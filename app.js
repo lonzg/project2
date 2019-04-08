@@ -1,7 +1,7 @@
 var express = require('express'); // put the module you want in the require function
 var bodyParser = require('body-parser'); 
 var app = express(); // set app to express function then intialize it 
-
+var PORT = process.env.PORT || 3000;
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
@@ -40,7 +40,7 @@ app.get('/profile/:name' , function(req,res){
 
 
 
-app.listen(3000, function(){
+app.listen(PORT, function(){
     console.log('server listening on port 3000')
 }); // give it a port number to use to respond to request
 
