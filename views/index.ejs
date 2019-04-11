@@ -23,149 +23,31 @@
 <body>
     <%- include partials/nav %> <!--must include the location of the partial template which is the nav.ejs file-->
   
-    <div class="wrap"
-        <main class="container-fluid">
-            <section class="row">
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <!-- <img src="https://unsplash.it/4579/3271?image=1084" class="responsive-img"> -->
-                            <span id="card" class="card-title">post one</span>
-                        </div>
-                        <div class="card-content">
-                            <p></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">post</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <!-- <img src="https://unsplash.it/5472/3648?image=1083" class="responsive-img"> -->
-                            <span id="card" class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">post</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <!-- <img src="https://unsplash.it/5416/3611?image=1082" class="responsive-img"> -->
-                            <span id="card"class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">post</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    <br>
-        <main class="container-fluid">
-            <section class="row">
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <!-- <img src="https://unsplash.it/4579/3271?image=1084" class="responsive-img"> -->
-                            <span id="card" class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">post</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s5 m3 l3">
-                    <div class="card">
-                        <div class="card-image">
-                            <!-- <img src="https://unsplash.it/5472/3648?image=1083" class="responsive-img"> -->
-                            <span id="card"class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">post</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <!-- <img src="https://unsplash.it/5416/3611?image=1082" class="responsive-img"> -->
-                            <span id="card"class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">post</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <div id="blog-area"></div>
 
-        <br>
-        <main class="container-fluid">
-            <section class="row">
-                <div class="col s5 m4 l3">
-                    <div class="card">
-                        <div class="card-image">
-                            <!-- <img src="https://unsplash.it/4579/3271?image=1084" class="responsive-img"> -->
-                            <span id="card" class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">post</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s5 m3 l5">
-                    <div class="card">
-                        <div class="card-image">
-                            <!-- <img src="https://unsplash.it/5472/3648?image=1083" class="responsive-img"> -->
-                            <span id="card" class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">post</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s5 m4 l3">
-                    <div class="card">
-                        <div class="card-image">
-                            <!-- <img src="https://unsplash.it/5416/3611?image=1082" class="responsive-img"> -->
-                            <span id="card" class="card-title">Card Title</span>
-                        </div>
-                        <div class="card-content">
-                            <p></p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">post</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-    
 </body>
+
+<script>
+    $.get("/", function(data) {
+    var rows =<%-JSON.stringify(data)%>
+    //console.log(data);
+    if (data.length !== 0) {
+    
+      for (var i = 0; i < rows.length; i++) {
+    
+        var row = $("<div>");
+        row.addClass("chirp");
+    
+        row.append("<p>" + rows[i].title + " </p>");
+        //console.log(rows[i].title);
+        row.append("<p>" + rows[i].post + "</p>");
+        row.append("<p> category: "+rows[i].category+"</p>");
+        
+        row.append("<p>At " +(rows[i].posted_on)/*format("h:mma on dddd")*/ + "</p>");
+        $("#blog-area").prepend(row);
+      }
+    }
+    });
+    
+    </script>
 </html>

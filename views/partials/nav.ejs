@@ -1,42 +1,46 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-     <!--Import Google Icon Font-->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!--Jquery cdn-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--Jquery cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-   
-      <style>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-      nav {
-        background-color: #fff;
-      }
-      .btn-floating.btn-large {
-    width: 56px;
-    height: 56px;
-    padding: 0;
-    margin: auto;
-    display: block;
-    
-}
-a.btn {
+
+  <style>
+    nav {
+      background-color: #fff;
+    }
+
+    .btn-floating.btn-large {
+      width: 56px;
+      height: 56px;
+      padding: 0;
+      margin: auto;
+      display: block;
+
+    }
+
+    a.btn {
       margin-top: 30%;
     }
+
     input[type="submit"] {
       width: 100%;
       margin-top: 50px;
     }
+
     .modal-close {
       position: absolute;
       top: 10px;
@@ -44,8 +48,7 @@ a.btn {
       margin: 0;
       padding: 0;
     }
-
-      </style>
+  </style>
 
 
 
@@ -55,277 +58,259 @@ a.btn {
 
 <body>
 
-<nav>
-<div> 
+  <div>
+    <div>
 
-<a id="button" class="btn-floating btn-large pulse red"><i class="material-icons"></i></a>
+      <a id="button" class="btn-floating btn-large pulse red"><i class="material-icons"></i></a>
 
 
-   <div id="next">
-     <!-- Modal Trigger -->
-     <button data-target="modal1" class="btn modal-trigger">Login</button>
+      <div id="next">
+        <!-- Modal Trigger -->
+        <button data-target="modal1" class="btn modal-trigger">Login</button>
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Login</h4>
-      <div class="row">
-          <form action="#">
-              <div class="input-field">
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Login</h4>
+            <div class="row">
+              <form action="#">
+                <div class="input-field">
                   <i class="material-icons prefix">person</i>
                   <input type="text" id="username">
                   <label for="username">Username</label>
-              </div><br>
-              <div class="input-field">
+                </div><br>
+                <div class="input-field">
                   <i class="material-icons prefix">lock</i>
                   <input type="password" id="pass">
                   <label for="pass">Password</label>
-              </div><br>
-              <input type="submit" value="Login" class="btn btn-large">
-          </form>
-        </div>
-    </div>
-   
-    </div>
-  
-  
-     <button data-target="modal2" class="btn modal-trigger">Sign-Up</button>
+                </div><br>
+                <input type="submit" value="Login" class="btn btn-large">
+              </form>
+            </div>
+          </div>
 
-  <!-- Modal Structure -->
-  <div id="modal2" class="modal">
-    <div class="modal-content">
-      <h4>Sign-up</h4>
-      <div class="row">
-          <form action="#">
-              <div class="input-field">
+        </div>
+
+
+        <button data-target="modal2" class="btn modal-trigger">Sign-Up</button>
+
+        <!-- Modal Structure -->
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <h4>Sign-up</h4>
+            <div class="row">
+              <form action="#">
+                <div class="input-field">
                   <i class="material-icons prefix">person</i>
                   <input type="text" id="username">
                   <label for="username">First name</label>
-              </div><br>
-              <div class="input-field">
-                   <i class="material-icons prefix">person</i>
-                   <input type="text" id="username">
-                   <label for="username">Lastname</label>
-               </div><br>
-               <div class="input-field">
-                       <i class="material-icons prefix">person</i>
-                       <input type="text" id="username">
-                       <label for="username">Username</label>
-                   </div><br>
-              <div class="input-field">
-                   <i class="material-icons prefix">lock</i>
-                   <input type="password" id="pass">
-                   <label for="pass">Password</label>
-              </div><br>
-          
-               <input type="submit" value="sign up" class="btn btn-large">
-          </form>
-          
+                </div><br>
+                <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  <input type="text" id="username">
+                  <label for="username">Lastname</label>
+                </div><br>
+                <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  <input type="text" id="username">
+                  <label for="username">Username</label>
+                </div><br>
+                <div class="input-field">
+                  <i class="material-icons prefix">lock</i>
+                  <input type="password" id="pass">
+                  <label for="pass">Password</label>
+                </div><br>
+
+                <input type="submit" value="sign up" class="btn btn-large">
+              </form>
+
+            </div>
+          </div>
+
         </div>
-    </div>
-   
-  </div>
 
-     <button data-target="modal3" class="btn modal-trigger">Profile</button>
+        <button data-target="modal3" class="btn modal-trigger">Profile</button>
 
-  
 
-  <!-- Modal Structure -->
-  <div id="modal3" class="modal">
-      <h5 class="modal-close">&#10005;</h5>
-      <div class="modal-content center">
-          <h2 class="left-align">My Profile</h2>
-         
-                      
-          <div class="row">
-              <form class="col s12">
-                  <div class="row">
-                      <div class="input-field col s12">
-                          <textarea id="textarea1" class="materialize-textarea"></textarea>
-                          
-                      </div>
-                  </div>
-              </form>
-              <form class="col s12">
-                  <div class="row">
-                      <div class="input-field col s12">
-                          <textarea id="textarea1" class="materialize-textarea"></textarea>
-                         
-                      </div>
-                  </div>
-              </form>
-          </div>
+
+        <!-- Modal Structure -->
+        <div id="modal3" class="modal">
+          <h5 class="modal-close">&#10005;</h5>
           <div class="modal-content center">
-              <div class="row">
-                  <form class="col s12">
-                      <div class="row">
-                          <div class="input-field col s12">
-                              <textarea id="textarea1" class="materialize-textarea"></textarea>
-                              
-                          </div>
-                      </div>
-                  </form>
-                  <form class="col s12">
-                      
-                          <button class=" btn waves-effect waves-light" type="submit" name="action">Submit
-                                  <i class="material-icons right">send</i>
-                                </button>
-                             
-                          </div>
-                      </div>
-                  </form>
-          </div>
-              <div class="modal-content center">
-                  <div class="row">
+            <h2 class="left-align">My Profile</h2>
 
-             </div>
-  </div>
-</div>
-          
 
-     <button data-target="modal4" class="btn modal-trigger">Contact</button>
-
-  <!-- Modal Structure -->
-  <div id="modal4" class="modal">
-    <div class="modal-content">
-      <h4>Contact Us</h4>
-      <div class="row">
-          <form class="col s12">
             <div class="row">
-              <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Email</label>
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+
+                  </div>
+                </div>
+              </form>
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-content center">
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="textarea1" class="materialize-textarea"></textarea>
+
+                    </div>
+                  </div>
+                </form>
+                <form class="col s12">
+
+                  <button class=" btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+
               </div>
             </div>
-
-
+            </form>
+          </div>
+          <div class="modal-content center">
             <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="textarea1" class="materialize-textarea"></textarea>
-                  <label for="textarea1">Comments</label> 
+
+            </div>
+          </div>
+        </div>
+
+
+        <button data-target="modal4" class="btn modal-trigger">Contact</button>
+
+        <!-- Modal Structure -->
+        <div id="modal4" class="modal">
+          <div class="modal-content">
+            <h4>Contact Us</h4>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Email</label>
+                  </div>
                 </div>
-              </div>  
 
 
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Comments</label>
+                  </div>
+                </div>
+
+
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+          </div>
+        </div>
+
+        <button data-target="modal5" class="btn modal-trigger">Settings</button>
+
+        <!-- Modal Structure -->
+        <div id="modal5" class="modal">
+          <div class="modal-content">
+            <h4>Settings</h4>
+            <form action="#">
+
+              <div class="input-field col s12">
+                <select multiple>
+
+                  <option value="" disabled selected>filter</option>
+                  <option value="1">celebrity</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+
+                <form class="col s12">
+                  <div class="row">
+
+                    <div class="input-field col s12">
+
+                      <label>location</label>
+                      <textarea id="textarea1" class="materialize-textarea"></textarea>
+
+                    </div>
+                  </div>
+                </form>
+                <form class="col s12">
+
+                  <button class=" btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+
+              </div>
+          </div>
           </form>
         </div>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
-    </div>
-  </div>
-
-     <button data-target="modal5" class="btn modal-trigger">Settings</button>
-
-  <!-- Modal Structure -->
-  <div id="modal5" class="modal">
-    <div class="modal-content">
-      <h4>Settings</h4>
-      <form action="#">
-        
-          <div class="input-field col s12">
-                  <select multiple>
-                          
-                    <option value="" disabled selected>filter</option>
-                    <option value="1">celebrity</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </select>
-                 
-                  <form class="col s12">
-                      <div class="row">
-                          
-                          <div class="input-field col s12">
-                              
-                               <label>location</label>
-                              <textarea id="textarea1" class="materialize-textarea"></textarea>
-                             
-                          </div>
-                      </div>
-                  </form>
-                  <form class="col s12">
-                          
-                          <button class=" btn waves-effect waves-light" type="submit" name="action">Submit
-                                  <i class="material-icons right">send</i>
-                                </button>
-                              
-                          </div>
-                      </div>
-                  </form>
-                </div>
-                
-         
-          
-      </form>
-  
-     <button data-target="modal6" class="btn modal-trigger">Topics</button>
 
 
-     <!-- Modal Structure -->
-  <div id="modal6" class="modal">
-      <h5 class="modal-close">&#10005;</h5>
-      <div class="modal-content center">
-          
-          <form action="#">
+
+        </form>
+
+        <button data-target="modal6" class="btn modal-trigger">Topics</button>
+
+
+        <!-- Modal Structure -->
+        <div id="modal6" class="modal">
+          <h5 class="modal-close">&#10005;</h5>
+          <div class="modal-content center">
+
+            <form action="/new" method="POST">
               <div class="input-field">
-                 
-                  <input type="text" id="username">
-                  <label for="username">Topic Post</label>
-              </div><br>
+                <input type="text" id="username" name="title">
+                <label for="username">Topic Post</label>
+              </div>
               <div class="input-field col s12">
-                      <select>
-                        <option value="" disabled selected>Category</option>
-                        <option value="1">celebrity</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                      </select>
-                     
-                    </div>
-                    <form class="col s12">
-                          <div class="row">
-                              
-                              <div class="input-field col s12">
-                                  
-                                   <label>location</label>
-                                  <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                  
-                              </div>
-                          </div>
-                      </form>
-                      <form class="col s12">
-                              
-                              <button class=" btn waves-effect waves-light" type="submit" name="action">Submit
-                                      <i class="material-icons right">send</i>
-                                    </button>
-                                  
-                              </div>
-                          </div>
-                      </form>
-          </form>
-      </div>
+                  <input type="text" id="username" name="post" >
+                  <label>post</label>
+              </div>
+              <div class="input-field col s12">
+                  <input type="text" id="username" name="category">
+                <label>category</label>
+              </div>
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </form>
+          </div>
+        </div>
   </div>
-</nav>
-</div>
+  </div>
 
 
-<script>
-$(document).ready(function () {
-     $('.modal').modal();
-   });
-            
+  <script>
+    $(document).ready(function () {
+      $('.modal').modal();
+    });
 
-var hidden = $('#next').hide();
 
-$('#button').on('click', function(){
-    hidden.toggle();
-});
+    var hidden = $('#next').hide();
 
-$('.dropdown-trigger').dropdown();
-    $(document).ready(function(){
-    $('select').formSelect();
-  });
-</script>
+    $('#button').on('click', function () {
+      hidden.toggle();
+    });
+
+    $('.dropdown-trigger').dropdown();
+    $(document).ready(function () {
+      $('select').formSelect();
+    });
+  </script>
 
 
 </body>
+
 </html>
