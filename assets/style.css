@@ -1,8 +1,5 @@
 
 
-nav {
-        
-      }
       .btn-floating.btn-large {
     width: 56px;
     height: 56px;
@@ -47,5 +44,18 @@ background-color: #d90505;
 display: flex;
     
 justify-content: space-evenly;
+}
+
+#blog-area{
+    background-color:black;
+    max-width:75%;
+    margin:0, auto;
+
+}
+
+.blog{
+    color:rgb(151, 241, 7);
+    border-style:dashed;
+    border-color:white;
 }
 
