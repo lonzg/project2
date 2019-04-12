@@ -31,14 +31,13 @@
       for (var i = 0; i < rows.length; i++) {
     
         var row = $("<div>");
-        row.addClass("chirp");
+        row.addClass("blog");
     
-        row.append("<p>" + rows[i].title + " </p>");
+        row.append("<h3>" + rows[i].title + " </h3>");
         //console.log(rows[i].title);
         row.append("<p>" + rows[i].post + "</p>");
         row.append("<p> category: "+rows[i].category+"</p>");
-        
-        row.append("<p>At " +(rows[i].posted_on)/*format("h:mma on dddd")*/ + "</p>");
+        row.append("<p>At " +(rows[i].posted_on) + "</p>");
         $("#blog-area").prepend(row);
       }
     }
