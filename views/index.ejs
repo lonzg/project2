@@ -19,7 +19,30 @@
 <body>
     <%- include partials/nav %> 
     <!--must include the location of the partial template which is the nav.ejs file-->
-  
-    <
+    <div id="blog-area"></div>
 </body>
+
+<script>
+    $.get("/", function(data) {
+    var rows =<%-JSON.stringify(data)%>
+    //console.log(data);
+    if (data.length !== 0) {
+    
+      for (var i = 0; i < rows.length; i++) {
+    
+        var row = $("<div>");
+        row.addClass("chirp");
+    
+        row.append("<p>" + rows[i].title + " </p>");
+        //console.log(rows[i].title);
+        row.append("<p>" + rows[i].post + "</p>");
+        row.append("<p> category: "+rows[i].category+"</p>");
+        
+        row.append("<p>At " +(rows[i].posted_on)/*format("h:mma on dddd")*/ + "</p>");
+        $("#blog-area").prepend(row);
+      }
+    }
+    });
+    
+    </script>
 </html>

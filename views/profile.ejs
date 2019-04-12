@@ -23,17 +23,9 @@
     </style>
 </head>
 <body>
-    <% include partials/nav %> 
+    <% include partials/nav2 %> 
     <!--must include the location of the partial template which is the nav.ejs file-->
-    <h1>Welcome to my site <%= person %></h1> <!--- when you want to output data from an object property-->
-    <p><strong>Age: </strong><%= data.age %></p>
-    <p><strong>Job: </strong><%= data.job %></p>
-    <h2>Hobbies</h2>
-    <ul>
-        <% data.hobbies.forEach(function(item){ %> <!---when you want to output javascript dont use the = sign-->
-            <li><% item %></li>
-            
-        <% }); %>
-    </ul>
+    <h1>Welcome</h1> <!--- when you want to output data from an object property-->
+ 
 </body>
 </html>
