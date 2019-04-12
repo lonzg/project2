@@ -50,7 +50,7 @@ app.get('/', function(req, res) {
     req.checkBody('email','the email is invalid').isEmail();
     var error= req.validationErrors();
     if(error){
-        res.render('signup', {qs:error}); //query data to contact
+        res.redirect('/'); //query data to contact
     }
     else{
         bcrypt.genSalt(10, function(err, salt) {
@@ -64,11 +64,11 @@ app.get('/', function(req, res) {
                   //var what_user_sees = "";
                   if (error){
                       //what_user_sees = 'you need to use a unique email';
-                      res.render('signup', {qs: req.query}); //query data to contact
+                      res.redirect('/'); //query data to contact
     
                   }else{
                       //what_user_sees = 'you have signed up - please go login at the login route';
-                      res.render('login', {qs: req.query}); //query data to contact
+                      res.redirect('/'); //query data to contact
                     }
     
                  // res.send(what_user_sees);
@@ -96,19 +96,20 @@ app.post('/login', function(req, res){
 	  // res.json(results);
 	  console.log(results);
 	  if (results.length == 0){
-	  	res.redirect('/login');
+	  	res.redirect('/');
 	  }else {
 	  	bcrypt.compare(req.body.password, results[0].password_hash, function(err, result) {
 	  	    
 	  	    if (result == true){
 
 	  	      req.session.user_id = results[0].id;
-	  	      req.session.username = results[0].username;
+            req.session.username = results[0].username;
+           
 
 	  	      res.redirect('/profile');
 
 	  	    }else{
-	  	      res.redirect('/signup');
+	  	      res.send('please sign up');
 	  	    }
 	  	});
 	  }
